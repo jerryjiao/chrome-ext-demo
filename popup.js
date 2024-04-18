@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function sendBackgroundColor(color) {
+    // 给background.js发送消息
     chrome.runtime.sendMessage({ action: 'changeBackgroundColor', color });
   }
 

@@ -1,21 +1,17 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "网页背景色切换器",
   "version": "1.0",
   "description": "自定义网页背景色的Chrome插件",
   "icons": {
     "16": "icon16.png",
-    "48": "icon48.png",
+    "48": "icon48.png", 
     "128": "icon128.png"
   },
-  "permissions": [
-    "activeTab"
-  ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   }
 }

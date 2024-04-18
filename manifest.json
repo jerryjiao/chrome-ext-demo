@@ -5,7 +5,7 @@
   "description": "自定义网页背景色的Chrome插件",
   "icons": {
     "16": "icon16.png",
-    "48": "icon48.png", 
+    "48": "icon48.png",
     "128": "icon128.png"
   },
   "action": {
@@ -13,5 +13,13 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["content_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"]
 }
